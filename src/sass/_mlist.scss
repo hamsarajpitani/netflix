@@ -1,0 +1,55 @@
+
+
+#list{
+    text-transform: capitalize;
+    color: white;
+    margin-top: 3rem;
+
+font-family: 'Poppins', sans-serif;
+// font-family: 'Roboto', sans-serif;
+}
+
+.list__text{
+    font-weight: 400;
+    font-size: 1rem;
+
+    &__title{
+        color: red;
+        font-size: .9rem;
+        font-weight: 800;
+        text-transform: uppercase;
+        line-height: 3rem;
+        span{
+            color: white;
+            font-size: 2rem;
+            text-transform: capitalize;
+        }
+    }
+}
+
+//*********CARD ****************//
+.card{
+    outline: none;
+    border-radius: 10px;
+    background-color: none !important;
+    box-shadow: -6px 3px 10px rgb(37, 36, 36);
+    transition: all .5s;
+    border: .2px solid white !important;
+    position: relative;
+    img{
+        z-index: 10;
+    }
+    &-body{
+        background-color: rgb(27, 26, 26);
+        color: white;
+        z-index: 1;
+        margin-top: -10px;
+    }
+    a{
+        background-color: transparent;
+    }
+
+    &:hover{
+        transform: translateY(5px);
+    }
+}

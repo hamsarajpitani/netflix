@@ -6,17 +6,41 @@
           box-sizing: border-box;
 }
 
+html,
 body {
-  width: 100vw;
-  height: 100vh;
-  background-color: black !important;
-  font-family: 'Roboto', sans-serif;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
   overflow-x: hidden;
+}
+
+body {
+  background-color: black !important;
+  font-family: "Roboto", sans-serif;
+}
+
+div.scrollmenu {
+  background-color: #333;
+  overflow: auto;
+  white-space: nowrap;
+}
+
+div.scrollmenu a {
+  display: inline-block;
+  color: white;
+  text-align: center;
+  padding: 14px;
+  text-decoration: none;
+}
+
+div.scrollmenu a:hover {
+  background-color: #777;
 }
 
 .navbar {
   background-color: black;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   font-weight: 580;
 }
 
@@ -28,8 +52,13 @@ body {
   outline: none;
 }
 
+#intro {
+  -webkit-box-shadow: inset 0px -10px 8px -10px rgba(24, 23, 23, 0.918);
+          box-shadow: inset 0px -10px 8px -10px rgba(24, 23, 23, 0.918);
+}
+
 .intro {
-  width: 100vw;
+  width: 100%;
   position: relative;
   color: white;
   text-transform: uppercase;
@@ -43,38 +72,58 @@ body {
 }
 
 .intro__img img {
-  width: 100%;
+  width: inherit;
   height: inherit;
-  -webkit-filter: brightness(55%);
-          filter: brightness(55%);
+  -webkit-filter: brightness(50%);
+          filter: brightness(50%);
   -o-object-fit: cover;
      object-fit: cover;
 }
 
 .intro__text {
   position: absolute;
-  bottom: 5rem;
+  bottom: 4.5rem;
   left: 3rem;
   font-family: "Roboto", sans-serif;
 }
 
 .intro__text__title {
   font-weight: 600;
-  font-size: 3.5rem;
-  line-height: 5rem;
+  font-size: 3rem;
+  line-height: 4.5rem;
 }
 
 .intro__text__para {
   font-weight: 400;
   text-transform: capitalize;
-  opacity: .7;
+  opacity: 0.7;
+  font-size: 0.8rem;
+}
+
+@media (max-width: 768.98px) {
+  .intro__text {
+    position: absolute;
+    bottom: 2rem;
+    left: 0.5rem;
+    font-family: "Roboto", sans-serif;
+  }
+  .intro__text__title {
+    font-weight: 600;
+    font-size: 2.2rem;
+    line-height: 4rem;
+  }
+  .intro__text__para {
+    font-weight: 500;
+    text-transform: capitalize;
+    opacity: 0.7;
+    font-size: 0.8rem;
+  }
 }
 
 #list {
   text-transform: capitalize;
   color: white;
-  margin-top: 3rem;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 
 .list__text {
@@ -84,7 +133,7 @@ body {
 
 .list__text__title {
   color: red;
-  font-size: .9rem;
+  font-size: 0.9rem;
   font-weight: 800;
   text-transform: uppercase;
   line-height: 3rem;
@@ -96,35 +145,51 @@ body {
   text-transform: capitalize;
 }
 
-.card {
-  outline: none;
-  border-radius: 10px;
-  background-color: none !important;
-  -webkit-box-shadow: -6px 3px 10px #252424;
-          box-shadow: -6px 3px 10px #252424;
-  -webkit-transition: all .5s;
-  transition: all .5s;
-  border: .2px solid white !important;
-  position: relative;
+.movies {
+  width: 100%;
+  overflow-y: hidden;
+  overflow-x: scroll;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-.card img {
-  z-index: 10;
+.movies > * {
+  height: 18rem;
+  width: 12rem;
+  margin-right: 2rem;
 }
 
-.card-body {
-  background-color: #1b1a1a;
-  color: white;
-  z-index: 1;
-  margin-top: -10px;
+.movies .card {
+  width: 12rem;
+  height: inherit;
 }
 
-.card a {
-  background-color: transparent;
+.movies::-webkit-scrollbar {
+  display: none;
+  overflow: hidden !important;
 }
 
-.card:hover {
-  -webkit-transform: translateY(5px);
-          transform: translateY(5px);
+@media (min-width: 1199.98px) {
+  *::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+            box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    background-color: #85858569;
+  }
+  *::-webkit-scrollbar {
+    width: 7px;
+    background-color: rgba(219, 219, 219, 0.404);
+  }
+  *::-webkit-scrollbar-thumb {
+    background-color: #cc0b0b;
+    border: 1px solid #550000;
+    border-radius: 10px;
+  }
 }
 /*# sourceMappingURL=main.css.map */

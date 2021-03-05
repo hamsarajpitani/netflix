@@ -8,9 +8,13 @@ const Main = () => {
   return (
     <>
       <Header />
-      <Intro/>
-      <Mlist/>
-      <Fotter />
+      <Intro />
+      <Mlist heading="now showing"/>
+      <Mlist heading="most popular"/>
+      <Mlist heading="hollywood shows"/>
+      <Mlist heading="bollywood shows"/>
+     
+      {/* <Fotter /> */}
     </>
   );
 };

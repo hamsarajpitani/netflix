@@ -1,3 +1,12 @@
+// Large devices (desktops, less than 1200px)
+@media (max-width: 1199.98px) {
+
+  .slide-btn{
+    display: none !important;
+  }
+  
+}
+// //********* M- HEADING ****************//
 #list {
   text-transform: capitalize;
   color: white;
@@ -24,34 +33,6 @@
   }
 }
 
-// //*********CARD ****************//
-// .card{
-//     outline: none;
-//     border-radius: 10px;
-//     background-color: none !important;
-//     box-shadow: -6px 3px 10px rgb(37, 36, 36);
-//     transition: all .5s;
-//     border: none !important;
-//     position: relative;
-//     // height: 17rem;
-//     img{
-
-//     }
-//     &-body{
-//         background-color: rgb(27, 26, 26);
-//         color: white;
-
-//         margin-top: -10px;
-//     }
-//     a{
-//         background-color: transparent;
-//     }
-
-//     &:hover{
-//         transform: translateY(5px);
-//     }
-// }
-
 .movies {
   width: 100%;
   overflow-y: hidden;
@@ -60,19 +41,51 @@
   justify-content: space-between;
   align-items: center;
 
+  // //********* ALL-CHILD-CARD ****************//
   & > * {
     height: 18rem;
     width: 12rem;
-    margin-right: 2rem;
+    margin-right: 3.5rem;
   }
 
   .card {
     width: 12rem;
     height: inherit;
+    border-radius: 10px;
+    transition: all .3s ease;
+    &:hover{
+      transform: scale(0.95);
+    }
+    img{
+      border-radius: inherit;
+      height: 100%;
+      width: 100%;
+      object-fit: fill;
+    }
+    
   }
-
+  
   &::-webkit-scrollbar {
     display: none;
     overflow: hidden !important;
   }
+}
+
+//**********************
+#slide-btn{
+  background-color: black;
+    outline: none;
+    font-weight: 700;
+    padding: .5rem 1rem;
+    margin: 1rem;
+    border: 1px solid white
+}
+
+.slide{
+  background-color: black;
+  outline: none;
+  font-weight: 700;
+  padding: .5rem 1rem;
+  margin: 1rem;
+  border: 1px solid white
 }

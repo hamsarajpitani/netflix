@@ -4,16 +4,14 @@ import Fotter from "./Fotter";
 import Header from "./Header";
 import Mlist from "./Mlist";
 
+
 const Main = () => {
   return (
     <>
       <Header />
       <Intro />
-      <Mlist heading="now showing"/>
-      <Mlist heading="most popular"/>
-      <Mlist heading="hollywood shows"/>
-      <Mlist heading="bollywood shows"/>
-     
+      <Mlist/>
+    
       {/* <Fotter /> */}
     </>
   );

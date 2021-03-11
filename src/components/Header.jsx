@@ -6,7 +6,7 @@ const Header = () => {
     <div>
       <div className="container-fluid">
         <div className="row">
-          <div className="col-12 mx-auto">
+          <div className="col-12 mx-auto p-0">
             <nav className="navbar navbar-expand-lg navbar-dark">
               <div className="container-fluid">
                 <a className="navbar-brand" href="#">

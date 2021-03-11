@@ -16,7 +16,7 @@ body {
 }
 
 body {
-  background-color: black !important;
+  background-color: #131212 !important;
   font-family: "Roboto", sans-serif;
 }
 
@@ -42,6 +42,11 @@ div.scrollmenu a:hover {
   background-color: black;
   font-family: "Poppins", sans-serif;
   font-weight: 580;
+}
+
+.navbar-brand {
+  font-weight: 900;
+  letter-spacing: 2px;
 }
 
 #searchbar {
@@ -120,6 +125,12 @@ div.scrollmenu a:hover {
   }
 }
 
+@media (max-width: 1199.98px) {
+  .slide-btn {
+    display: none !important;
+  }
+}
+
 #list {
   text-transform: capitalize;
   color: white;
@@ -163,17 +174,51 @@ div.scrollmenu a:hover {
 .movies > * {
   height: 18rem;
   width: 12rem;
-  margin-right: 2rem;
+  margin-right: 3.5rem;
 }
 
 .movies .card {
   width: 12rem;
   height: inherit;
+  border-radius: 10px;
+  -webkit-transition: all .3s ease;
+  transition: all .3s ease;
+}
+
+.movies .card:hover {
+  -webkit-transform: scale(0.95);
+          transform: scale(0.95);
+}
+
+.movies .card img {
+  border-radius: inherit;
+  height: 100%;
+  width: 100%;
+  -o-object-fit: fill;
+     object-fit: fill;
 }
 
 .movies::-webkit-scrollbar {
   display: none;
   overflow: hidden !important;
+}
+
+#slide-btn {
+  background-color: black;
+  outline: none;
+  font-weight: 700;
+  padding: .5rem 1rem;
+  margin: 1rem;
+  border: 1px solid white;
+}
+
+.slide {
+  background-color: black;
+  outline: none;
+  font-weight: 700;
+  padding: .5rem 1rem;
+  margin: 1rem;
+  border: 1px solid white;
 }
 
 @media (min-width: 1199.98px) {
